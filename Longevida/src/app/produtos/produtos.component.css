@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+
+h2{
+    font-family: 'Oswald', sans-serif;
+    color: #256670;
+}
+
+.nome{
+    font-family: 'Oswald', sans-serif;
+    color: #256670;
+    font-size: 2.82vh;
+}
+
+.text{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.70vh;
+}
+
+.preco{
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.50vh;
+    color: #256670;
+}

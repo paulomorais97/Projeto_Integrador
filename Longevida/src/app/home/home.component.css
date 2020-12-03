@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.nome{
+    font-family: 'Oswald', sans-serif;
+    color: #256670;
+}
+
+.tech{
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
+    color: red;
+    margin-top: -6%;
+}
+
+.developer{
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
+    color: #256670;
+    margin-top: -6%;
+}
+
+.scrum{
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
+    color: rgb(43, 43, 177);
+    margin-top: -6%;
+}
+
+.time{
+    font-family: 'Oswald', sans-serif;
+    font-size: 7vh;
+    color: #256670;
+    background: rgb(24,58,85);
+    background: linear-gradient(86deg, rgba(24,58,85,1) 0%, rgba(37,102,112,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

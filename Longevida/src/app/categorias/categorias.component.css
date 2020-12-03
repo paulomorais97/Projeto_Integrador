@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.cat{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-family: 'Oswald', sans-serif;
+}
+.cat:hover{
+    color: #256670;
+}

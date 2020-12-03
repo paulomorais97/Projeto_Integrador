@@ -1,0 +1,146 @@
+
+
+
+<div class="container w-100">
+
+    <div class="row w-100">
+  
+        <div class="col-md-12">
+           
+        <hr>
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="../../assets/img/slide1_produtos.png" alt="Primeiro Slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../../assets/img/slide2_produtos.png" alt="Segundo Slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../../assets/img/slide3_produtos.png" alt="Terceiro Slide">
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+                </a>
+            </div>
+        </div> 
+            <hr>
+        <div class="container mb-3">
+           <div class="row w-100">
+               <div class="col-md-6">
+                <h2 class="text-left mt-5 mb-3">Produtos</h2>
+                <form class="form-inline my-2 my-lg-0 d-flex justify-content-start mb-3">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" name="nomeProduto" [(ngModel)]="nomeProduto">
+                    <button class="btn btn-outline my-2 my-sm-0" type="submit" (click)='getProdutoByName()'>Pesquisar</button>
+                  </form>
+               </div>
+               <div class="col-md-6">
+            
+               </div>
+           </div>
+           
+            
+        </div>      
+        <div class=" container d-flex justify-content-center align-items-center ">
+              <div class="row d-flex justify-content-between align-items-center ">
+                <div class="col-md-4 mt-3" *ngFor="let item of listaProdutos | orderBy: key : reverse">
+                    <div class="card mb-5" style="width: 20rem;" >
+                        <img class="card-img-top" src="../../assets/img/card1.jpg" alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <div >
+                                <p class="card-text font-weight mb-1 nome">{{item.nameProduto}}</p>     
+                            </div>
+                            <div class="mb-3">
+                                <p class="card-text text">{{item.descricaoProduto}}</p>
+                            </div>
+                            <div class="mt-4 d-flex justify-content-center align-items-end">
+                                <p class="card-text font-weight-bold preco">R$ {{item.precoProduto}}</p>        
+                            </div>
+                            <div class="d-flex justify-content-center align-items-end">
+                            <a  class="btn btn-outline mt-1 " (click)='venda()'> <img width="40px" height="25px" src="../../assets/img/carrinho-de-compras.svg" alt="...">Comprar</a> 
+                          </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+
+        <hr>
+
+       
+        
+        <div class="container d-flex justify-content-start flex-column mb-5">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+  
+
+                <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                  <ul class="navbar-nav mr-auto ">
+                    
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: rgba(30,66,94,1);" >
+                        Consulte nossas categorias!
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+                        <div *ngFor='let item of listaCategoria | orderBy: key : reverse'>
+                        <p class="dropdown-item">{{item.categoria}}</p>
+                        </div>
+                        <div class="dropdown-divider"></div>
+
+                      </div>
+                    </li>
+                    
+                  </ul>
+                  
+                </div>
+              </nav>    
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-end flex-column">
+                    <h2 class="text-right mt-5 mb-3">Categoria</h2>
+                    <form class="form-inline my-2 my-lg-0 d-flex justify-content-end mb-3">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" name="nomeCategoria" [(ngModel)]="nomeCategoria">
+                    <button class="btn btn-outline my-2 my-sm-0" type="submit" (click)='getProdutoByCategoria()'>Pesquisar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="row w-100 d-flex justify-content-center align-items-center">
+              <div class="w-100 d-flex flex-row justify-content-between" *ngFor="let item of listaProdutosCat | orderBy: key : reverse">
+                  <div class="col-md-4 mt-3" *ngFor='let prod of item.produtos'>
+                  <div class="card mb-5" style="width: 20rem;" >
+                      <img class="card-img-top" src="../../assets/img/card1.jpg" alt="Imagem de capa do card">
+                      <div class="card-body">
+                          <div >
+                              <p class="card-text mb-1 nome">{{prod.nameProduto}}</p>     
+                          </div>
+                          <div class="mb-3">
+                              <p class="card-text text">{{prod.descricaoProduto}}</p>
+                          </div>
+                          <div class="mt-4 d-flex justify-content-center align-items-end">
+                              <p class="card-text font-weight-bold preco">R$ {{prod.precoProduto}}</p>        
+                          </div>
+                          <div class="d-flex justify-content-center align-items-end">
+                          <a  class="btn btn-outline mt-1 " (click)='venda()'> <img width="40px" height="25px" src="../../assets/img/carrinho-de-compras.svg" alt="...">Comprar</a> 
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+      </div>
+    </div>
+    
+    </div>
+</div>  

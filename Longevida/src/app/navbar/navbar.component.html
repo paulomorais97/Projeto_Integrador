@@ -1,0 +1,67 @@
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background: rgb(37,102,112);
+background: linear-gradient(86deg, rgba(37,102,112,1) 0%, rgba(30,66,94,1) 100%);">
+  <a class="navbar-brand" href="#">
+    <img src="../../assets/img/Logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    Longevida
+  </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+ 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item pl-5 pr-3">
+            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item pl-2 pr-3">
+            <a class="nav-link" routerLink='/produtos'>Produtos</a>
+          </li> 
+          <li class="nav-item pl-2 pr-3">
+            <a class="nav-link" routerLink='/contato'>Contato</a>
+          </li>
+          <li class="nav-item pl-2 pr-3">
+            <a class="nav-link" routerLink='/empresa'>Quem Somos</a>
+          </li>
+    
+        </ul>
+      </div>
+    
+    
+
+  
+    <div class="d-flex justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto ">
+
+        <div *ngIf='auth.btnLogin()'>
+          <li class="nav-item pl-5 pr-3">
+            <a class="nav-link " routerLink='/cadastro'>Cadastre-se</a>
+          </li>
+         </div>
+
+        <div *ngIf='auth.btnLogin()'>
+          <li class="nav-item pl-5 pr-3">
+           <a class="nav-link " routerLink='/login'>Login</a>
+          </li>
+        </div>
+        
+
+         <div *ngIf='auth.btnSair()'>
+          <li class="nav-item pl-5 pr-3">
+            <a class="nav-link "(click)='sair()' >Sair</a>
+          </li>
+        </div>
+      </ul>
+    </div>
+  
+  
+    
+    
+</nav>
+
+
+
+
+
+
+  

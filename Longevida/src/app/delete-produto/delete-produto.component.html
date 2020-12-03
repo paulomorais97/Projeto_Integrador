@@ -1,0 +1,34 @@
+<div class="container">
+
+    <div class="row mt-5 mb-5">
+        <h2 style="color: rgba(30,66,94,1);" class="text-monospace">Produto</h2>
+        <div class="col-md-8">
+          <div class="card mt-5">
+             <div class="card-header">
+                 <div class="row d-flex align-items-center">
+                     <div class="col-md-8">
+                         <h5 class="card-title text-monospace">Nome: {{produtos.nameProduto}} </h5>
+                         <h5 class="card-title text-monospace">Quantdade: {{produtos.quantidadeProduto}} </h5>
+                         <h5 class="card-title text-monospace">Preço: {{produtos.precoProduto}} </h5>
+                         <h5 class="card-title text-monospace">Descrição: {{produtos.descricaoProduto}} </h5>
+                         <small>Categoria: {{produtos.categoria.categoria}}</small>
+                     </div>
+                     <div class="col-md-4 d-flex justify-content-end">
+                     </div>
+                 </div>
+             </div>
+  
+          </div>
+  
+          <hr class="mt-4 mb-4">
+  
+          <h5 class="text-center">Tem certeza que deseja apagar esse produto?</h5>
+          <div class="d-flex justify-content-center mt-5">
+             <button class="btn btn-outline-success mr-3" (click)="btnSim()">Sim</button>
+             <button class="btn btn-outline-danger" (click)="btnNao()" >Não</button>
+          </div>
+          
+        </div>
+    </div>
+  </div>
+  

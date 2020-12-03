@@ -1,0 +1,32 @@
+.btn-outline{
+    color:rgb(37,102,112)!important;
+    background: rgb(250, 251, 252) !important;
+    border-color: rgb(37,102,112)!important;
+  }
+  .btn-outline:hover{
+    color: #fff !important;
+    background: linear-gradient(86deg, rgba(37,102,112,1) 0%, rgba(30,66,94,1) 100%) !important;
+    border-color: rgb(61, 182, 201) !important; 
+  }
+  .btn-outline:focus, .btn-outline.focus{
+    box-shadow: 0 0 0 0.2rem  rgb(71, 111, 117);
+  }
+  .btn-outline.disabled, .btn-outline:disabled {
+    color:rgb(66, 162, 177);
+    background-color: transparent;
+  }
+  .btn-outline:not(:disabled):not(.disabled):active, .btn-outline:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-rose.dropdown-toggle {
+    color: #fff;
+    background-color: rgb(37,102,112);
+  }
+  .btn-outline:not(:disabled):not(.disabled):active:focus, .btn-outline:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-outline.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem  rgba(142, 174, 179, 0.877);
+  }
+
+  .nome{
+    font-family: 'Oswald', sans-serif;
+    color: #256670;
+    font-size: 9vh;
+}

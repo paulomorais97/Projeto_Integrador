@@ -1,0 +1,13 @@
+<div class="card border-0" style="width: 18rem;">
+    <div class="d-flex justify-content-start">
+      <h1 class="display-4 mt-5 text-left">CATEGORIAS</h1>
+    </div>
+
+    <div class="card-body">
+        <ul class="nav flex-column">
+            <li class="nav-item" *ngFor="let item of listaCategoria | orderBy: key : reverse">
+              <p>{{item.categoria}}</p>
+            </li>
+          </ul>
+    </div>
+</div>
